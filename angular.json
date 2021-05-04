@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "NG-PoC-Calc"
+    }
+  },
+  "defaultProject": "NG-PoC-Calc",
+  "cli": {
+    "analytics": false
+  }
 }
