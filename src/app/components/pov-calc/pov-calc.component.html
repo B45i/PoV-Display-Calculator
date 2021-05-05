@@ -1,1 +1,29 @@
-<p>pov-calc works!</p>
+<mat-card>
+  <div [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Rows</mat-label>
+      <input matInput formControlName="rows" required type="number" min="1" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Columns</mat-label>
+      <input matInput formControlName="cols" required type="number" min="1" />
+    </mat-form-field>
+  </div>
+
+  {{ cols | json }}
+  <div class="keys">
+    <div *ngFor="let col of cols; let i = index">
+      <div *ngFor="let key of keys">
+        <button
+          mat-mini-fab
+          color="primary"
+          (click)="onClick(i, key)"
+          [class.mat-button-disabled]="!logicalAnd(col, key)"
+        >
+          <mat-icon>lightbulb</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-card>
