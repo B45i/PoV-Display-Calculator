@@ -1,5 +1,5 @@
 <mat-card>
-  <div [formGroup]="form">
+  <div [formGroup]="form" class="inputs">
     <mat-form-field>
       <mat-label>Rows</mat-label>
       <input matInput formControlName="rows" required type="number" min="1" />
@@ -11,7 +11,11 @@
     </mat-form-field>
   </div>
 
-  {{ cols | json }}
+  <div>
+    <h1 class="text-center">
+      {{ cols | json }}
+    </h1>
+  </div>
   <div class="keys">
     <div *ngFor="let col of cols; let i = index">
       <div *ngFor="let key of keys">

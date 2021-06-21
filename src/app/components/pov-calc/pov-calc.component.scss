@@ -1,3 +1,13 @@
 .keys {
   display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  & > * {
+    flex-grow: 1;
+  }
 }

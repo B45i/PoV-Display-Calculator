@@ -1,1 +1,13 @@
 @import "./SCSS/theme.scss";
+
+app-pov-calc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px);
+  background-color: #ddd;
+}
+
+.text-center {
+  text-align: center;
+}
